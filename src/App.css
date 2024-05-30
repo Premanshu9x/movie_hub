@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: white;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+
+.navbar a:hover {
+    color: #ff5860
+}
+
+.home-container {
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.main-card {
+    width: 10rem;
+    text-decoration: none;
+}
+
+.main-card-1 {
+    position: relative;
+}
+
+
+.card_image {
+    width: 10rem;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.card_image:hover {
+    filter: opacity(0.3);
+    transition: opacity 0.3s ease;
+}
+
+
+.movie_lang {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    border: 1px solid white;
+    width: max-content;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.main-card:hover .movie_lang {
+    opacity: 1;
+    visibility: visible;
+}
+
+.detail_image img {
+    width: 10rem;
+    height: auto;
+}
+
+.trailer {
+    width: 32rem;
+    height: 18rem;
+}
+
+@media screen and (max-width: 600px) {
+    .trailer {
+        width: 320px;
+        height: 180px;
+        margin-top: 2rem;
+    }
+}
+
+.paginationWap .pagination {
+    background-color: #2b2b31;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 30%);
+    border-radius: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 50px auto 0;
+}
+
+.paginationWap .pagination .page-item {
+    display: block;
+    position: relative;
+    height: 50px;
+    transition: 0.4s ease;
+}
+
+.paginationWap .pagination .page-item a {
+    font-size: 16px;
+    height: 50px;
+    background-color: transparent;
+    border: 0;
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    border-radius: 90px;
+    line-height: 35px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+
+.paginationWap .pagination .page-item.active a {
+    color: #fff;
+    cursor: default;
+    font-weight: 500;
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+}
+
+.paginationWap .pagination .page-item:hover a {
+    color: #fff;
+}
+
+.socialIconsList {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.socialIconsList li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.socialIconsList li a {
+    color: #fff;
+    font-weight: 500;
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.socialIconsList li a:hover {
+    background: #fff;
+    color: #ff5860;
+}
+
+.head_3 {
+    text-align: center;
+    margin: 0;
+}
+
+@media (max-width: 576px) {
+    .paginationWap .pagination .page-item a {
+        font-size: 15px;
+        padding: 0 9px;
+    }
+}
+
+.MoviesList {
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.FilterSpan {
+
+    border-radius: 10px;
+    background-color: #ff5860;
+    color: white;
+    cursor: pointer;
+}
+
+.FilterSpanCross {
+    border-radius: 10px;
+    background-color: whitesmoke;
+    color: #ff5860;
+    cursor: pointer;
+}
+
+
+.Radio {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    background-color: rgb(49, 55, 55);
+    width: fit-content;
+    border-radius: 30px;
+
+}
+
+.Search {
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.posterImage {
+    height: 90vh;
+}
+
+.posterImage>img {
+    margin: auto;
+    display: block;
+    height: 90vh;
+    filter: brightness(50%);
+}
+
+
+
+.posterImage__overlay {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    text-align: left;
+}
+
+.posterImage__title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.posterImage__description {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .posterImage {
+        height: auto;
+    }
+
+    .posterImage>img {
+        margin: auto;
+        display: block;
+        height: auto;
+        filter: brightness(50%);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .posterImage__overlay {
+        
+        display: none;
+    }
+
+    .posterImage__description {
+        display: none
+    }
+
+    .posterImage__runtime {
+        display: none
+    }
+
+    .posterImage__title {
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: 3rem
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
